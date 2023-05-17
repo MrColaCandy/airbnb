@@ -1,7 +1,7 @@
 import { Nunito } from "next/font/google";
 import "./globals.css";
-import { Inter } from "next/font/google";
 import Navbar from "./components/navbar/Navbar";
+import RegisterModal from "./components/modals/registerModal/RegisterModal";
 
 const font = Nunito({
   subsets: ["latin"],
@@ -20,6 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         {children}
+        <RegisterModal />
         <Navbar />
       </body>
     </html>
