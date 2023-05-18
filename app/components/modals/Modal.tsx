@@ -62,7 +62,10 @@ const Modal = ({
           >
             <div className="translate h-full lg:h-auto md:h-auto border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
               <div className="flex items-center p-6 rounded-t justify-center relative border-b-[1px]">
-                <button className=" p-1 border-0 hover:opacity-70 transition-opacity absolute left-9">
+                <button
+                  onClick={handelClose}
+                  className=" p-1 border-0 hover:opacity-70 transition-opacity absolute left-9"
+                >
                   <IoMdClose size={18} />
                 </button>
                 <div className=" text-lg font-semibold">{title}</div>
@@ -84,6 +87,7 @@ const Modal = ({
                     onClick={handelSubmit}
                   />
                 </div>
+                {footer}
               </div>
             </div>
           </div>
